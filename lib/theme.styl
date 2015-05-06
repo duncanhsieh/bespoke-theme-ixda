@@ -1,0 +1,163 @@
+// Bespoke Classes: https://github.com/markdalgleish/bespoke-classes
+// Stylus: http://learnboost.github.io/stylus
+
+@import 'normalizecss/normalize.css'
+
+primary = #00F3A5
+
+slide_width = 640px
+slide_height = 480px
+slide_background = transparent
+
+slide_transition_length = .6s
+slide_transition_easing = ease
+slide_transition_rotate_y = 20deg
+// Safari bugs out on 3d transform-origins, so we have to fake it
+slide_transition_nudge_x = -640px
+
+bullet_transition_length = .3s
+bullet_transition_easing = ease
+
+spacer_gif = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+
+article
+  font-family: Verdana, sans-serif
+  color: #515E56
+  transition: all .3s ease
+  display: none
+  &.bespoke-parent
+    display: block
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    overflow: hidden
+    perspective: 600px
+    @media print
+      overflow: visible
+      position: static
+
+    &.green
+      background: #55c4c4
+    &.white
+      background: white
+    &.light-gary
+      background: #deded0
+    &.red
+      background: #ed1c24
+    &.orange
+      background: #f26639
+    &.bright-green
+      background: #a6ce39
+    &.blue
+      background: #296098
+
+.bespoke-parent
+  text-size-adjust: auto
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow: hidden
+
+.bespoke-scale-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  pointer-events: none
+  .bespoke-active
+    pointer-events: auto
+
+.bespoke-slide
+  width: 640px
+  height: 480px
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-left: -(@width / 2)
+  margin-top: -(@height / 2)
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  transition:
+    transform slide_transition_length slide_transition_easing,
+    opacity slide_transition_length slide_transition_easing,
+    background slide_transition_length slide_transition_easing
+  transform-origin: 50% 50% 0
+  transform: translate3d(0,0,0)
+  backface-visibility: hidden
+  background: slide_background
+
+.bespoke-before
+  transform: translateX(slide_transition_nudge_x * -1) translateX(slide_width / -2) rotateY(slide_transition_rotate_y * -1) translateX(slide_width / -2)
+
+.bespoke-after
+  transform: translateX(slide_transition_nudge_x) translateX(slide_width / 2) rotateY(slide_transition_rotate_y) translateX(slide_width / 2)
+  @media print
+    transform: none
+
+.bespoke-bullet-inactive
+  opacity: 0
+  pointer-events: none
+
+.bespoke-inactive
+  opacity: 0
+  pointer-events: none
+  @media print
+    opacity 1
+
+.bespoke-active
+  opacity: 1
+  transition-delay: .2s
+
+.bespoke-backdrop
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: -1
+  opacity: 0
+
+.bespoke-backdrop-active
+  opacity: 1
+
+.bespoke-progress-parent
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: .3vw
+
+.bespoke-progress-bar
+  position: absolute
+  height: 100%
+  background: #ccc
+  transition: width .6s ease
+
+
+// bespoke-scale styles
+
+.bespoke-scale-parent
+  perspective: 600px
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  pointer-events: none
+  .bespoke-active
+    pointer-events: auto
+  @media print
+    transform: none !important
+
+.emphatic
+  background: slide_background
+
+.emphatic-text
+  color: white
