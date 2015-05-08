@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "A theme for Bespoke.js",
   "homepage": "https://github.com/duncanhsieh/bespoke-theme-ixda",
-  "bugs": "https://github.com/duncanhsieh/bespoke-theme-ixda/issues",
-  "author": {
-    "name": "Duncan Hsieh",
-    "url": "https://github.com/duncanhsieh",
-    "email": "duncanhsieh@gmail.com"
+  "bugs": {
+    "url": "https://github.com/duncanhsieh/bespoke-theme-ixda/issues"
   },
+  "author": "Duncan Hsieh <duncanhsieh@gmail.com> (https://github.com/duncanhsieh)",
   "main": "./dist/bespoke-theme-ixda.js",
   "repository": {
     "type": "git",
@@ -64,5 +62,39 @@
   "keywords": [
     "bespoke-plugin",
     "bespoke-theme"
-  ]
+  ],
+  "dependencies": {
+    "bespoke": "^1.0.0",
+    "bespoke-backdrop": "^1.0.0",
+    "bespoke-classes": "^1.0.0",
+    "bespoke-bullets": "^1.1.0",
+    "bespoke-progress": "^1.0.0",
+    "bespoke-keys": "^1.0.0",
+    "bespoke-scale": "^1.0.1",
+    "bespoke-state": "^1.0.0",
+    "bespoke-touch": "^1.0.0",
+    "browserify": "^4.2.3",
+    "gh-pages": "^0.2.0",
+    "brfs": "^1.4.0",
+    "gulp": "^3.8.11",
+    "function-bind": "^0.1.0",
+    "gulp-autoprefixer": "^1.0.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean": "^0.2.4",
+    "gulp-csso": "^0.2.9",
+    "gulp-connect": "^2.2.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-header": "^1.2.2",
+    "gulp-jade": "^0.6.1",
+    "gulp-stylus": "^1.3.7",
+    "gulp-uglify": "^0.3.2",
+    "lodash": "^2.4.2",
+    "gulp-util": "^2.2.20",
+    "insert-css": "^0.2.0",
+    "normalizecss": "^3.0.0",
+    "opn": "^0.1.2",
+    "through": "^2.3.7"
+  },
+  "license": "ISC"
 }
