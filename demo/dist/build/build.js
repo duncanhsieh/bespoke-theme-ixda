@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var bespoke = require('bespoke'),
-  fanzytv = require('../../../lib/bespoke-theme-fanzytv.js'),
+  ixda = require('../../../lib/bespoke-theme-ixda.js'),
   keys = require('bespoke-keys'),
   touch = require('bespoke-touch'),
   bullets = require('bespoke-bullets'),
@@ -10,7 +10,7 @@ var bespoke = require('bespoke'),
   state = require('bespoke-state');
 
 bespoke.from('article', [
-  fanzytv(),
+  ixda(),
   keys(),
   touch(),
   bullets('li, .bullet'),
@@ -20,7 +20,7 @@ bespoke.from('article', [
   state()
 ]);
 
-},{"../../../lib/bespoke-theme-fanzytv.js":2,"bespoke":11,"bespoke-backdrop":3,"bespoke-bullets":4,"bespoke-keys":6,"bespoke-progress":7,"bespoke-scale":8,"bespoke-state":9,"bespoke-touch":10}],2:[function(require,module,exports){
+},{"../../../lib/bespoke-theme-ixda.js":2,"bespoke":11,"bespoke-backdrop":3,"bespoke-bullets":4,"bespoke-keys":6,"bespoke-progress":7,"bespoke-scale":8,"bespoke-state":9,"bespoke-touch":10}],2:[function(require,module,exports){
 
 var classes = require('bespoke-classes');
 var insertCss = require('insert-css');

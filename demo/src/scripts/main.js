@@ -1,5 +1,5 @@
 var bespoke = require('bespoke'),
-  fanzytv = require('../../../lib/bespoke-theme-fanzytv.js'),
+  ixda = require('../../../lib/bespoke-theme-ixda.js'),
   keys = require('bespoke-keys'),
   touch = require('bespoke-touch'),
   bullets = require('bespoke-bullets'),
@@ -9,7 +9,7 @@ var bespoke = require('bespoke'),
   state = require('bespoke-state');
 
 bespoke.from('article', [
-  fanzytv(),
+  ixda(),
   keys(),
   touch(),
   bullets('li, .bullet'),
